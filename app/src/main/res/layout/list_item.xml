@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <!-- Miniatura de la noticia -->
+    <ImageView
+        android:id="@+id/news_thumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/news_thumbnail"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder" />
+
+    <!-- Título de la noticia -->
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/news_thumbnail"
+        android:layout_alignParentTop="true"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- Autor de la noticia -->
+    <TextView
+        android:id="@+id/news_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_title"
+        android:layout_toEndOf="@id/news_thumbnail"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Descripción de la noticia -->
+    <TextView
+        android:id="@+id/news_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_author"
+        android:layout_toEndOf="@id/news_thumbnail"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <!-- Fecha de publicación -->
+    <TextView
+        android:id="@+id/news_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_description"
+        android:layout_toEndOf="@id/news_thumbnail"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="4dp"/>
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra de navegación con título de la noticia -->
+        <LinearLayout
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/purple_500"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/navbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:text="Título"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Imagen de la noticia -->
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <!-- Título de la noticia -->
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <!-- Autor de la noticia -->
+        <TextView
+            android:id="@+id/detail_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:textColor="#666" />
+
+        <!-- Descripción de la noticia -->
+        <TextView
+            android:id="@+id/detail_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:textColor="#666" />
+
+        <!-- Contenido completo de la noticia -->
+        <TextView
+            android:id="@+id/detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:textColor="#333" />
+
+        <!-- Contenedor para los botones con íconos -->
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Regresar"
+                android:src="@drawable/baseline_keyboard_return_24"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/more_info_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Más información"
+                android:src="@drawable/baseline_info_24"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/share_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="Compartir"
+                android:src="@drawable/baseline_share_24"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/comments_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/comment_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Escribe tu comentario"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:background="@drawable/custom_edittext" />
+
+            <Button
+                android:id="@+id/post_comment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar Comentario"
+                android:layout_marginBottom="16dp"
+                android:background="@color/purple_500"
+                android:textColor="@android:color/white"
+                android:padding="12dp"/>
+
+            <TextView
+                android:id="@+id/comments_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentarios"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/comments_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

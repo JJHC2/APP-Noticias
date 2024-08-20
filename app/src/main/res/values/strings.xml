@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProyectoFinal</string>
+    <string name="article_image">Imagen del artículo</string>
+    <string name="image_desc">Imagen</string>
+    <string name="news_image">Imagen</string>
+    <string name="news_thumbnail">Imagen2\n</string>
+    <string name="user_image_description">Usuario</string>
+    <string name="like_button_description">Me gusta</string>
+</resources>

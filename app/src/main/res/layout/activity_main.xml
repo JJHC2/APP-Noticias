@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Barra de navegación -->
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/purple_500"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/navbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="NOTICIAS"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navbar"
+        android:layout_margin="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Buscar noticias"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp" />
+
+    <!-- Lista de noticias -->
+    <ListView
+        android:id="@+id/news_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/search_edit_text"
+        android:layout_above="@id/logout_button"
+        android:padding="8dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- Mensaje o imagen para cuando no hay noticias -->
+    <TextView
+        android:id="@+id/no_news_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Search News"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <!-- Botón de cierre de sesión -->
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent" />
+
+</RelativeLayout>
